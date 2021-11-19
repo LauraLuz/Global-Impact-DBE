@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head th:include="_template :: head"></head>
+
+<body>
+
+	<header th:include="_template :: header"></header>
+	
+	<div class="alert" th:if="${message != null}" th:text="${message}"></div>
+	
+	<div class="card">
+		<nav th:include="_template :: menu('donation')"></nav>
+		<a href="/donation/new" class="button primary action">
+			<span class="material-icons">
+				add_circle_outline
+			</span>
+			<span th:text="#{label.newdonation}"></span>
+		</a>
+		
+		<div class="donations">
+			<div class="card donation" th:each="donation : ${donations}">
+				<div>
+					<h3 th:text="${donation.description}"></h3>
+					<span th:text="${donation.quantidade}+'qtd'"></span>
+				</div>
+				<p th:text="${donation.descricaoRetirada}"></p>
+				<p th:text="${donation.type}"></p>
+				<div class="donation-actions">
+					
+					<a 
+						th:href="${'/donation/hold/' + donation.id}"
+						class="button icon primary" 
+						th:title="#{donation.catch}" 
+						th:if="${donation.user == null}">
+							<span class="material-icons">
+								back_hand
+							</span>
+					</a>
+					
+					<a 
+						th:href="${'/donation/release/' + donation.id}"
+						class="button icon primary" 
+						th:title="#{donation.release}" 
+						th>
+							
+					</a>
+					
+				</div>
+			</div>
+		
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

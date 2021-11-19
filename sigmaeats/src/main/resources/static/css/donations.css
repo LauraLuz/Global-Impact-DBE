@@ -1,0 +1,37 @@
+.card .donations{
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.card .donation{
+	display:flex;
+	justify-content: space-between;
+	margin: 1rem;
+	padding: 1rem;
+	max-width: 250px;
+	background: #FFF;
+	color: #000;
+	border-radius: 7px;
+
+}
+
+.card .donation h3{
+	margin: 0;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.card .donation meter{
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.card .donation .donation-actions {
+	display: flex;
+	justify-content: space-between;
+}

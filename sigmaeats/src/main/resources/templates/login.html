@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head th:include="_template :: head"></head>
+
+<body>
+
+	<h1>Sigma Eats</h1>
+
+	<div class="alert error" th:if="${param.error}">Login invalido</div>
+	<section class="card form">
+	<h2>Login</h2>
+	
+
+		<form th:action="@{/login}" method="post">
+			<label for="username">E-mail</label> <input type="email"
+				name="username" id="username" /> <label for="password">Senha</label>
+			<input type="password" name="password" id="password">
+
+			<div class="buttons">
+				<button class="primary">Entrar</button>
+			</div>
+
+		</form>
+	</section>
+
+</body>
+</html>
