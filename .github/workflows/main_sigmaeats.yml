@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'SigmaEats'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A1D7F65E8E8542378B03D6239F9D6CEF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9C12F675485F49939936702571D7A4F3 }}
           package: '*.jar'
